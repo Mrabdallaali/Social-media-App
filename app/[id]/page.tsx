@@ -100,7 +100,7 @@ export default async function page({ params }: PageProps) {
           </div>
 
           <div className="border-b border-gray-100 p-3 text-[15px]">
-            <span className="font-bold">{post?.likes.length}</span> Likes
+            <span className="font-bold">{post?.likes?.length || 0}</span> Likes
           </div>
 
           <div
@@ -125,7 +125,7 @@ export default async function page({ params }: PageProps) {
             />
           </div>
 
-          {post?.comments.map((comment: Comment) => (
+          {post?.comments?.map((comment: Comment) => (
             <Comment
               name={comment.name}
               username={comment.username}
