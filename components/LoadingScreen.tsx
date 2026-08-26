@@ -6,6 +6,8 @@ import Image from "next/image";
 import React from "react";
 import { useSelector } from "react-redux";
 
+//loading screen component that is displayed when the app is loading
+
 export default function LoadingScreen() {
   const loadingScreenOpen = useSelector(
     (state: RootState) => state.loading.loadingScreenOpen,
